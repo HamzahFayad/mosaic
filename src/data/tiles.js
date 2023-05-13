@@ -1,25 +1,41 @@
 export const tiles_data = [
   {
-    color: "red",
+    name: "tile01",
+    color: "col01",
     sound: "./public/audio/red.mp3",
     shape: "circle",
   },
   {
-    color: "blue",
+    name: "tile02",
+    color: "col02",
     sound: "./public/audio/blue.mp3",
     shape: "triangle",
   },
   {
-    color: "green",
+    name: "tile03",
+    color: "col03",
     sound: "./public/audio/blue.mp3",
     shape: "triangle",
   },
   {
-    color: "yellow",
+    name: "tile04",
+    color: "col04",
     sound: "./public/audio/blue.mp3",
     shape: "triangle",
   },
   {
+    name: "tile05",
+    color: "col05",
+    sound: "./public/audio/blue.mp3",
+    shape: "triangle",
+  },
+  {
+    name: "tile06",
+    color: "col06",
+    sound: "./public/audio/blue.mp3",
+    shape: "triangle",
+  },
+  /*{
     color: "orange",
     sound: "./public/audio/blue.mp3",
     shape: "triangle",
@@ -43,5 +59,5 @@ export const tiles_data = [
     color: "lilac",
     sound: "./public/audio/blue.mp3",
     shape: "triangle",
-  },
+  },*/
 ];

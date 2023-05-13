@@ -5,6 +5,7 @@ body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  overflow-y: hidden;
   background-color: #313745;
   margin: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

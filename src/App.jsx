@@ -30,6 +30,14 @@ function App() {
     setTile(newTiles);
     console.log("Shuffle", tiles_data);
   }
+
+  const elements = tile.map((t) => {
+            return (
+              <div  key={t.name} className="tile-wrapper">
+                <div className={'tile ' + t.color}></div>
+                </div>
+            )
+          })
   
   return (
     
@@ -40,17 +48,22 @@ function App() {
           <span>A</span>ic
         </h1>
       </header>
-      <section className="tiles Grid-width-wide">
-        
-        {
-          tile.map((t) => {
-            return (
-              <div className={'tile ' + t.color} key={t.color}>{ t.color }</div>
-            )
-          })
-        }
-      </section>
       <button onClick={handleShuffle}>Generate</button>
+      <section className="tiles Grid-width-wide">
+        {elements}
+        {elements}
+        {elements}
+        {elements}
+      </section>
+      <svg style={{"visibility": "hidden", "position": "absolute"}} width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="round">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />    
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+              <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+          </defs>
+</svg>
     </div>
   );
 }
