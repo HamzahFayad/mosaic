@@ -39,4 +39,9 @@ export const tiles_data = [
     sound: "./public/audio/blue.mp3",
     shape: "triangle",
   },
+  {
+    color: "lilac",
+    sound: "./public/audio/blue.mp3",
+    shape: "triangle",
+  },
 ];

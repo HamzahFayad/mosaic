@@ -32,6 +32,7 @@ function App() {
   }
   
   return (
+    
     <div className="App Grid-width-wide">
       <header className="App-header">
         <h1>
@@ -40,10 +41,11 @@ function App() {
         </h1>
       </header>
       <section className="tiles Grid-width-wide">
+        
         {
           tile.map((t) => {
-            return(
-              <div className="tile" key={t.color}>{t.color}</div>
+            return (
+              <div className={'tile ' + t.color} key={t.color}>{ t.color }</div>
             )
           })
         }

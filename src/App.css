@@ -21,7 +21,7 @@
   margin: 0 auto;
   width: 90%;
   max-width: 1440px;
-  padding: 2rem 0;
+  /*padding: 2rem 0;*/
 }
 
 h1{
@@ -44,25 +44,43 @@ h1 span{
   justify-content: space-between;
   align-items: center;
   gap: 5px;
+  background-color: #191b21;
+  margin: 4rem 0;
+  border-radius: 6px;
 }
 @media screen and (max-width: 1440px) {
-  .tiles {
-    justify-content: flex-start;
-  }
-}
-@media screen and (max-width: 900px) {
   .tiles {
     justify-content: center;
   }
 }
 
 .tile{
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-color: var(--lilac);
   padding: 20px;
   display: grid;
   place-items: center;
+}
+.tile.red{
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: rgb(232, 75, 75);
+}
+.tile.green {
+  clip-path: circle(50% at 50% 50%);
+  background-color: green;
+}
+.tile.blue {
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  background-color: rgb(27, 27, 118);
+}
+.tile.orange {
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  background-color: orange;
+}
+.tile.brown {
+  clip-path: polygon(0 100%, 0% 0, 100% 100%);
+  background-color: rgb(86, 47, 47);
 }
 
 @media screen and (max-width: 768px) {
