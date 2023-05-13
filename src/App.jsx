@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 function App() {
 
-  // shuffle array function
+  // shuffle array function----
   const shuffle = array => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
