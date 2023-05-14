@@ -50,6 +50,9 @@ button{
   font-weight: bold;
   cursor: pointer;
 }
+button:hover{
+  filter: brightness(70%);
+}
 
 .tiles{
   background-color: #191b21;
@@ -82,7 +85,7 @@ button{
 @media screen and (min-width: 900px) {
   .tiles {
     width: 60%;
-    transform: scale(0.6) translateY(-18rem);
+    transform: scale(0.6) translateY(-20rem);
   }
 }
 /*.tiles{

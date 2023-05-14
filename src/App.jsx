@@ -1,6 +1,7 @@
 import "./App.css";
 import {tiles_data} from "./data/tiles";
 import { useState, useEffect } from "react";
+import key from "./audio/key01.mp3"
 
 function App() {
 
@@ -31,11 +32,17 @@ function App() {
     console.log("Shuffle", tiles_data);
   }
 
+
+  const playSound = () => {
+    let audio = new Audio(key);
+    audio.play();
+  }
+
   const elements = tile.map((t) => {
             return (
               <div  key={t.name} className="tile-wrapper">
-                <div className={'tile ' + t.color}></div>
-                </div>
+                <div onClick={(t) => { playSound(t.sound) }} className={'tile ' + t.color}>{t.sound}</div>
+              </div>
             )
           })
   
