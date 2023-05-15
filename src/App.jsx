@@ -1,10 +1,16 @@
 import "./App.css";
 import {tiles_data} from "./data/tiles";
 import { useState, useEffect } from "react";
-import key from "./audio/key01.mp3"
+import key1 from "./audio/key01.mp3"
+import key2 from "./audio/key02.mp3"
+import key3 from "./audio/key03.mp3"
+import key4 from "./audio/key04.mp3"
+import key5 from "./audio/key05.mp3"
+import key6 from "./audio/key06.mp3"
 
 function App() {
 
+  let audios = [key1, key2, key3, key4, key5, key6];
   // shuffle array function----
   const shuffle = array => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -33,15 +39,23 @@ function App() {
   }
 
 
-  const playSound = () => {
-    let audio = new Audio(key);
-    audio.play();
+  const playSound = (i) => {
+    //let audio = new Audio(key1);
+    //audio.play();
+    var audioKey = document.querySelector(".audio-"+i);
+    audioKey.play();
+    console.log(audioKey.currentTime);
+    if (audioKey.currentTime > 0.25) {
+      console.log("PAUSE");
+      audioKey.currentTime = 0;
+    }
   }
 
-  const elements = tile.map((t) => {
+  const elements = tile.map((t,i) => {
             return (
               <div  key={t.name} className="tile-wrapper">
-                <div onClick={(t) => { playSound(t.sound) }} className={'tile ' + t.color}>{t.sound}</div>
+                <div onClick={() => {playSound(i)}} className={'tile ' + t.color}>{t.sound}</div>
+                <audio style={{ "visibility": "hidden", "display": "none"}} className={"audio-"+i} src={audios[i]} controls/>
               </div>
             )
           })
