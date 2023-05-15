@@ -153,6 +153,7 @@ button:hover{
   clip-path: circle(50% at 50% 50%);
   background-color: #ae91cb;
   position: relative;
+  margin: 4px;
 }
 .tile.col06{
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
