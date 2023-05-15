@@ -53,9 +53,9 @@ function App() {
 
   const elements = tile.map((t,i) => {
             return (
-              <div  key={t.name} className="tile-wrapper">
-                <div onClick={() => {playSound(i)}} className={'tile ' + t.color}>{t.sound}</div>
-                <audio style={{ "visibility": "hidden", "display": "none"}} className={"audio-"+i} src={audios[i]} controls/>
+              <div onClick={() => {playSound(i)}} key={t.name} className="tile-wrapper">
+                <div className={'tile ' + t.color}></div>
+                <audio style={{ "visibility": "hidden", "display": "none"}} className={"audioKey audio-"+i} src={audios[i]} controls/>
               </div>
             )
           })
