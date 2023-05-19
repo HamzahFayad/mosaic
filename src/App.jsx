@@ -25,6 +25,13 @@ function App() {
   //state for each tile in tiles_data
   const [tile, setTile] = useState(tiles_data);
  
+  const [range, setRange] = useState(0);
+
+  const handleRange = (e) => {
+    setRange(e.target.value);
+    console.log(e.target.value);
+  }
+
   //randomize each tile on page load
   useEffect(() => {
     const newTiles = shuffle([...tiles_data]);
@@ -44,6 +51,7 @@ function App() {
     //audio.play();
     var audioKey = document.querySelector(".audio-"+i);
     audioKey.play();
+    audioKey.volume = range;
     console.log(audioKey.currentTime);
     if (audioKey.currentTime > 0.25) {
       console.log("PAUSE");
@@ -70,6 +78,7 @@ function App() {
         </h1>
       </header>
       <button onClick={handleShuffle}>Generate</button>
+      <input type="range"onChange={handleRange} value={range} min={0} max={1} step={0.1}/>
       <section className="tiles Grid-width-wide">
         {elements}
         {elements}
